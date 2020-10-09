@@ -33,14 +33,14 @@ export default function Footer() {
                     <h3>Social</h3> 
                         <ul   style={{width:"100%",display:"flex",flexDirection:"row",justifyContent:"space-around",alignItems:"center"}}>
                                 
-                            <li><FaInstagramSquare size="34"/></li>
-                            <li><FaTwitterSquare size="34" /></li>
-                            <li><FaFacebookSquare size="34" /></li>
+                            <FaInstagramSquare  className="icon1"/>
+                            <FaTwitterSquare  className="icon1"/>
+                            <FaFacebookSquare className="icon1"/>
                            
                         </ul>
                     </div >
             </div>
-                <h3>{date.getFullYear()} All Right Reserved</h3>
+                <h5>{date.getFullYear()} All Right Reserved</h5>
         </div>
     )
 }

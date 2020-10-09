@@ -5,13 +5,13 @@ export const Service = ({servic}) => {
     return (
         <div className="service">
             <div className="service-img-container">
-            <img src={`/images/${servic.img}.jpg`}></img>
+            <img src={`/images/${servic.img}.jpg`} alt={servic.img}></img>
             </div>
            <div className="service-footer" >
                <span>
                {servic.name}
                </span>
-               <a className="btn-secondary">Detail</a>
+               <a  href="#!" className="btn-secondary">Detail</a>
               
            </div>
 

@@ -2,7 +2,7 @@
  margin: 0;
  padding: 0;
  box-sizing: border-box;
- 
+ font-family: 'Roboto', sans-serif;
 }
 
 
@@ -18,7 +18,8 @@
   height: 80vh;
   width: 100%;
   background: url("/images/jogym.jpg");
- background-position: center;
+  background-attachment: fixed;
+ background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -96,7 +97,7 @@
  color: #fafafa;
 }
 .bridge-container h1::after{
-  content: "chY";
+  content: "Y";
   color: #e92c2c;
 }
 .bridge-container :nth-child(2){
@@ -124,8 +125,7 @@ color: #eeeded;
 
 .services{
   width: 100%;
-  min-height: 60vh;
-
+  min-height: 50vh;
  background:linear-gradient(#666565, #a39e9e, #afafaf);
 }
 .services h1{
@@ -133,16 +133,15 @@ color: #eeeded;
  font-size: 2.6rem;
   text-decoration: underline;
   text-decoration-color: #e92c2c;
- padding: 2% 0;
+padding-top: 1%;
   text-align: center;
 }
 .services-container{
  
-  margin-top: 2%;
   width: 100%;
   height: 100%;
   display: grid;
-  align-content: center;
+  align-content:center;
   justify-content: center;
   grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
   grid-auto-rows: 50vh;
@@ -159,6 +158,7 @@ color: #eeeded;
   margin: 0 1%;
   position: relative;
 }
+ 
 .service::after{
   content: "";
   position: absolute;
@@ -210,6 +210,7 @@ z-index: 3;
   text-transform: capitalize;
 }
 .service-footer a{
+  text-decoration: none;
   border: 1px solid #fafafa;
   color:#fafafa;
   font-size: 1.4rem;
@@ -225,18 +226,35 @@ cursor: pointer;
 }
 
 
-/* end service  */
+/* END OF SERVICES */
 /* START FOOTER */
 .footer{
-  
 width: 100%;
-
-background:#131212;
+background:url("/images/strength.jpg");
+background-repeat:no-repeat;
+background-size: cover;
+background-position: top center;
+position: relative;
+background-attachment: fixed;
 }
+.footer::after{
+  content: "";
+  background: #0c0c0cd3;
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+background-attachment: fixed;
+}
+
+
 .footer h1{
   text-align: center;
   color: #fafafa;
   padding: 2% 0;
+  position: relative;
+  z-index: 1;
 }
 .footer h1:nth-child(1)::after{
   content: "Y";
@@ -244,6 +262,8 @@ background:#131212;
 
 }
 .footer-container{
+  position: relative;
+  z-index: 3;
   height: 60vh;
   width: 100%;
   display: flex;
@@ -282,30 +302,215 @@ background:#131212;
   text-align: center;
   color: #b3b2b2;
 }
+.footer h5{
+  text-align: center;
+  color: grey;
+}
+.icon1{
+  font-size: 2.5rem;
+}
 
-@media only screen and (max-width: 894px){
+/* END OF FOOTER  */
+
+/* START COACHES */
+
+.coaches{
+  width:100%;
+  background: #e92c2c;
+}
+.coaches-container{
+  width:90%;
+  transform: translateX(5%);
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(275px,1fr));
+  grid-auto-rows: 380px;
+ gap:6px;
+ justify-content: center;
+}
+
+.coach-card{
+  
+  padding:0;
+  width:100%;
+  height:100%;
+
+  display:grid;
+  grid-template-rows:15% 55% 30%;
+  box-shadow: 3px 4px 9px #a39e9e;
+
+}
+.coach-card-header{
+grid-row:1/2;
+grid-column:1/-1;
+background: #0a0a0ae3;
+position: relative;
+border-bottom: 0.5px solid #e92c2c;
+}
+.coach-card-header h1{
+  height: 100%;
+  font-size:1.2rem;
+ 
+  color: #fafafa;
+ 
+  transform: translateY(25%);
+ text-align: center;
+ 
+}
+.coach-card-img{
+  grid-row:1/-1;
+  grid-column:1/-1;
+}
+.coach-card-img img{
+  width: 100%;
+  height:100%;
+  object-position: top center;
+  object-fit: cover;
+  
+}
+.coach-card-footer{
+  border-top: 1px solid #161616;
+  grid-row:3/4;
+  grid-column:1/-1;
+  display: grid;
+ grid-template-rows: 70% 30%;
+ width: 100%;
+ height: 100%;
+ 
+}
+.coach-card-footer div{
+  grid-row:1/2;
+  grid-column: 1/-1;
+ width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+ 
+  justify-content: center;
+column-gap: 8px;
+background: #fafafa;
+}
+.coach-card-footer div h6{
+  width: 30%;
+  height: 48%;
+  overflow: hidden;
+ box-shadow: 1px 1.5px 2px #a39e9e;
+ justify-self: left;
+ text-align: center;
+ text-transform: capitalize;
+  font-size:1.0rem;
+  color:#161616;
+ justify-self: left;
+}
+.coach-card-footer span{
+  border-top:0.5px solid #b3b2b2;
+  height: 100%;
+  width: 100%;
+  font-weight: 600;
+  grid-row:2/3;
+  grid-column: 1/-1;
+  text-align: center;
+  background: #fafafa;
+  color: #131212;
+}
+
+
+
+
+
+
+
+
+/* START OF MEDIA QUERRY */
+/* MEDIA QUERY 1*/
+
+@media only screen and (max-width:360px){
+  .headers{
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
   .bridge{
-    height: 120vh;
+   height: 140vh;
+   width: 100%;
+ 
   }
   .bridge-container{
     width: 100%;
-    height: 40%;
+    height: 65%;
+    padding: 0;
+   align-content: space-around;
+   font-size:1.1rem;
+  }
+  
+  .bridge img{
+    width: 100%;
+    height: 35%;
+    object-fit: contain;
+  }
+  .services-container{
+    min-height: 80vh;
+    padding-bottom:2.5%;
+  }
+  .services-container div{
+    font-size: 2.4rem;
+  }
+  .footer h1{
+    font-size: 2.6rem;
+  }
+  .footer h3{
+    font-size: 2.0rem;
+  }
+  .footer-container{
+    height: unset;
+    min-height: 120vh;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer-container div{
+    width: 80%;
+    text-align: center;
+
+  }
+  .footer-container div ul li{
+    font-size: 1.6rem;
+    margin:0.5% 0;
+  }
+  .icon1{
+    font-size: 2.5rem;
+  }
+
+}
+
+
+/* MEDIA QUERRY 2 */
+
+
+@media only screen and (min-width: 360px) and (max-width:992px){
+  .headers{
+    height: 100vh;
+    
+  }
+  .bridge{
+    height: 90vh;
+  }
+  .bridge-container{
+    width: 100%;
+    height: 60%;
     padding: 0;
    align-content: space-around;
   }
   .bridge img{
     width: 100%;
-    height: 60%;
+    height: 40%;
     object-fit: contain;
   }
   
   .footer{
-    margin-top: 10%;
+   
     text-align: center;
   }
   .footer-container{
     height: unset;
-    min-height: 80vh;
+    min-height: 90vh;
     justify-items: center;
   }
   .footer-container div{
@@ -315,5 +520,103 @@ background:#131212;
   .footer-container div ul{
     align-content: space-around;
   }
+  .footer h5{
+    font-size:1.3rem;
+    color:grey;
+  }
+  .icon1{
+    font-size: 2.6rem;
+  }
   
 }
+
+/* MEDIA QUERRY 3 */
+/* **** */
+@media only screen and (min-width: 992px) and (max-width:980px) {
+  .headers{
+    height: 100vh;
+  }
+  .headers-container h4,.headers-container h1{
+    font-size: 3rem;
+  }
+  .headers-container a{
+    font-size: 2.5rem;
+    padding: 5% 2.5%;
+  }
+  .bridge{
+    height: 50vh;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .bridge-container{
+   
+    width: 100%;
+    height: 70%;
+    font-size: 1.5rem;
+    padding: 0;
+   align-content: space-around;
+  }
+  .bridge-container h1{
+    font-size: 2.8rem;
+  }
+  .bridge-container span:nth-child(2){
+    font-size: 2.0rem;
+    color: #aca9a9;
+  }
+  .bridge img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+.services h1{
+  font-size: 3.5rem;
+}
+  .service div span{
+    font-size: 3.5rem;
+  }
+  .service a{
+    font-size: 3rem;
+  }
+  
+  .footer{
+   
+    text-align: center;
+  }
+  .footer h1{
+    font-size: 3.5em;
+    padding-top: 2%;
+  }
+  
+  .footer-container{
+    padding: 0;
+    margin-top: 0;
+    flex-wrap: nowrap;
+   height: 60vh;
+   justify-content: center;
+   align-items: center;
+  }
+  .footer-container div{
+    width: 100%;
+    height: 60%;
+  }
+  .footer-container h3{
+    font-size: 2.5rem;
+  }
+  .footer-container div ul{
+    align-content: space-around;
+  
+  }
+  .footer-container div ul li{
+    font-size: 2.0rem;
+  }
+ .icon1{
+   font-size: 4rem;
+ }
+  .footer h5{
+    font-size:1.3rem;
+    color:grey;
+  }
+}
+
+/* END OF MEDIA QUERRY */

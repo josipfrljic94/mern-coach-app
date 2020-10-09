@@ -3,6 +3,7 @@ import './App.css';
 import Home from "./components/Home";
 import Services from "./components/Services";
 import Footer from "./components/Footer";
+import Coaches from "./components/Coaches";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <Home/>
       <Services/>
       <Footer/>
-     
+      <Coaches/>
     </div>
   );
 }

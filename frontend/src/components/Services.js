@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import Service from '../Service';
+import Service from './Service';
 
 
 
@@ -10,7 +10,7 @@ import Service from '../Service';
 export default function Services() {
 
     const services=[
-    {name:"look",img:"look"},
+    {name:"medical",img:"look"},
     {name:"basic gym",img:"strength"},
     {name:"combat sports",img:"technique"},
     {name:"team sports", img:"sport"},

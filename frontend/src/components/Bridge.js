@@ -4,7 +4,7 @@ export default function Bridge() {
     return (
         <div className="bridge">
             <div className="bridge-container">
-                <h1>Welcome to Coa</h1>
+                <h1>Welcome to Coach</h1>
                 <span>
                     CoachY is ipsum coren mandila fusil amos kopor
                 </span>
@@ -17,7 +17,7 @@ export default function Bridge() {
                     but also the leap into electronic typesetting, remaining essentially unchanged
                 </span>
             </div>
-            <img src="/images/manwoman.png"></img>
+            <img src="/images/manwoman.png" alt="bridgeimg"></img>
           
         </div>
     )
