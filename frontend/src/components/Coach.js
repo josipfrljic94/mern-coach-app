@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Coach = ({coach}) => {
     return (
@@ -20,7 +20,7 @@ const Coach = ({coach}) => {
                     })}
                     </div>
                    
-                    <span>Number of clients :{coach.clients}</span>
+                    <span>{coach.clients} clients</span>
                     
                     
                 </div>
