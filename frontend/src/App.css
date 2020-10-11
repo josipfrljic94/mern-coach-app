@@ -138,7 +138,8 @@ padding-top: 1%;
 }
 .services-container{
  
-  width: 100%;
+  width: 90%;
+  margin-left:5%;
   height: 100%;
   display: grid;
   align-content:center;
@@ -148,12 +149,13 @@ padding-top: 1%;
  padding:5% 0;
 }
 .services-container div{
- 
+ width:100%;
   height: 100%;
  
  
 }
 .service{
+  width:100%;
   height: 100%;
   margin: 0 1%;
   position: relative;
@@ -316,42 +318,47 @@ background-attachment: fixed;
 
 .coaches{
   width:100%;
-  background: #e92c2c;
+margin-top: 5%;
 }
 .coaches-container{
+  margin-left:5%;
   width:90%;
-  transform: translateX(5%);
   display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(275px,1fr));
-  grid-auto-rows: 380px;
- gap:6px;
- justify-content: center;
+  grid-template-columns:repeat(auto-fit,minmax(275px,1fr));
+  grid-auto-rows: 375px;
+gap:6px;
+justify-content: center;
+ 
+}
+
+.coach{
+  border-radius: 5px;
 }
 
 .coach-card{
-  
+  margin:0;
   padding:0;
   width:100%;
   height:100%;
-
   display:grid;
-  grid-template-rows:15% 55% 30%;
-  box-shadow: 3px 4px 9px #a39e9e;
-
+  grid-template-rows:55% 15% 10% 20%;
+  box-shadow: 3px 2px 6px #666565 ;
+  border-radius: 5px 5px 5px 5px;
 }
 .coach-card-header{
-grid-row:1/2;
+grid-row:3/4;
 grid-column:1/-1;
-background: #0a0a0ae3;
+background: #e92c2c;
 position: relative;
-border-bottom: 0.5px solid #e92c2c;
+
+border-bottom: 1px solid #e92c2c;
 }
 .coach-card-header h1{
   height: 100%;
-  font-size:1.2rem;
- 
-  color: #fafafa;
- 
+  font-size:1.3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color:#fafafa;
   transform: translateY(25%);
  text-align: center;
  
@@ -359,23 +366,30 @@ border-bottom: 0.5px solid #e92c2c;
 .coach-card-img{
   grid-row:1/-1;
   grid-column:1/-1;
+  width: 100%;
+  height: 100%;
+ 
 }
 .coach-card-img img{
   width: 100%;
   height:100%;
   object-position: top center;
   object-fit: cover;
-  
+  border-radius: 5px 5px 5px 5px;
 }
 .coach-card-footer{
-  border-top: 1px solid #161616;
-  grid-row:3/4;
+  
+  background:#3f3c3c42;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  grid-row:4/5;
   grid-column:1/-1;
   display: grid;
  grid-template-rows: 70% 30%;
  width: 100%;
  height: 100%;
- 
+
 }
 .coach-card-footer div{
   grid-row:1/2;
@@ -383,22 +397,27 @@ border-bottom: 0.5px solid #e92c2c;
  width: 100%;
   display:flex;
   flex-wrap: wrap;
- 
   justify-content: center;
+  align-items: center;
 column-gap: 8px;
-background: #fafafa;
+/* background: #18181833; */
+
 }
 .coach-card-footer div h6{
+  margin-top: 1%;
   width: 30%;
-  height: 48%;
+  height: 40%;
   overflow: hidden;
- box-shadow: 1px 1.5px 2px #a39e9e;
+ /* box-shadow: 1px 2px 3.5px #aca9a9;
+ box-shadow: -1px -2px -3.5px #272727 ; */
+ border: 1px solid #fafafa;
  justify-self: left;
  text-align: center;
  text-transform: capitalize;
   font-size:1.0rem;
-  color:#161616;
+  color:#fafafa;
  justify-self: left;
+ 
 }
 .coach-card-footer span{
   border-top:0.5px solid #b3b2b2;
@@ -408,14 +427,65 @@ background: #fafafa;
   grid-row:2/3;
   grid-column: 1/-1;
   text-align: center;
-  background: #fafafa;
-  color: #131212;
+  text-transform: uppercase;
+  background: #eeededa9;
+  color:#272727;
+  border-radius: 0 0 5px 5px;
 }
 
+.loading{
+ width:100%;
+ height:100vh;
+  background-color: #1a1940;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.loading-container{
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading-container div{
+  width: 3vw;
+	height: 3vw;
+	border-radius: 100%;
+  margin: 2vw;
+  animation:bounce 1.5s 0.5s linear infinite;
+}
+.yellow{
+  background: yellowgreen;
+  
+}
+.red{
+  background: red;
+  animation-delay: 0.1s;
+}
+.blue{
+  background:blue;
+  animation-delay: 0.2s;
+}
+.violet{
+  background: violet;
+  animation-delay: 0.3s;
+}
 
-
-
+@keyframes bounce {
+	0%, 50%, 100% {
+		transform: scale(1);
+		filter: blur(0px);
+	}
+	25% {
+		transform: scale(0.6);
+		filter: blur(3px);
+	}
+	75% {
+		filter: blur(3px);
+		transform: scale(1.4);
+	}
+}
 
 
 

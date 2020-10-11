@@ -1,22 +1,38 @@
-import React from 'react'
-import data from "../data";
+import React,{useEffect} from 'react'
+import {connect} from "react-redux";
 import Coach from "./Coach";
+import {getCoaches} from "../actions/coaches";
+import Loading from "./Loading";
 
-const Coaches = () => {
-   console.log(data.coaches)
+const Coaches = ({coaches,loading,getCoaches}) => {
+    console.log("hello",coaches)
+
+
+
+useEffect(() => {
+    getCoaches();
+  },[getCoaches])
+
     return (
         <div className="coaches">
+            {loading ? <Loading/> :
             <div className="coaches-container">
-            {data.coaches.map(coach=>{
-                return(
-                <Coach coach={coach} key={coach.key}/>
-                )
-            })}
+                {coaches.map(coach=>{
+                    return(
+                    <Coach coach={coach} key={coach.id}/>
+                    )
+                })}
 
             </div>
         
-        
+            }
         </div>
+       
     )
 }
-export default Coaches;
+
+const mapStateToProps=(state)=>({
+    coaches:state.coaches.coaches,
+    loading:state.coaches.loading
+})
+export default connect(mapStateToProps, {getCoaches })(Coaches);
