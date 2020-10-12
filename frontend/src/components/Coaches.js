@@ -19,7 +19,7 @@ useEffect(() => {
             <div className="coaches-container">
                 {coaches.map(coach=>{
                     return(
-                    <Coach coach={coach} key={coach.id}/>
+                    <Coach coach={coach} key={coach._id}/>
                     )
                 })}
 

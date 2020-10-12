@@ -15,7 +15,7 @@ const Coach = ({coach}) => {
                     <div>
                     {coach.master.map(m=>{
                         return(
-                        <h6>{m}</h6>
+                        <h6 key={m}>{m}</h6>
                         )
                     })}
                     </div>

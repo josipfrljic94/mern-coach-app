@@ -1,16 +1,16 @@
 const express= require("express");
-const bodyParser= require("body-parser")
+
 const app= express();
 const cors= require("cors");
 // const bodyParser= require("body-parser");
 const connectToDB=require("./config/connectToDB");
-const users = require("./routes/userrote");
+const users =require("./routes/users");
 const coaches=require("./routes/coaches");
 
 
 
 app.use(cors());
-app.use(express.json({extended:false}));
+
 connectToDB();
 
 
@@ -20,7 +20,7 @@ app.get("/",(req,res)=>{
         "hello"
     )
 })
-app.use(bodyParser.json());
+app.use(express.json());
 app.use("/api/users",users)
 app.use("/api/coaches",coaches)
 
