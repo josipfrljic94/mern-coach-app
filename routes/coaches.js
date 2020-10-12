@@ -18,5 +18,4 @@ router.delete("/:id",async(req,res)=>{
     res.send(deletedCoach);
 })
 
-
- module.exports= router;
+module.exports= router

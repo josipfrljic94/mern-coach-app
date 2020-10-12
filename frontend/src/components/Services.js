@@ -61,7 +61,7 @@ export default function Services() {
             <Slider {...settings} style={{width:"90%",marginLeft:"5%"}} className="services-slider">
                 {services.map(servic=>{
                     return(
-                        <Service servic={servic}/>
+                        <Service servic={servic} key={servic.name}/>
                     )
                 })}
             </Slider>
